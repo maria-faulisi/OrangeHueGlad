@@ -1,0 +1,27 @@
+node_modules
+
+# Build output
+dist/
+
+# Storybook build
+storybook-static/
+
+# Test coverage
+coverage/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Claude Code
+.claude/settings.local.json
+
+# Editor
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
