@@ -53,16 +53,17 @@ export const Small: Story = {
   },
 };
 
-export const NewStory: Story = {
+export const PrimaryDisabled: Story = {
   args: {
-    primary: false,
+    primary: true,
     label: 'Button',
+    disabled: true,
   },
 };
 
-export const New: Story = {
+export const SecondaryDisabled: Story = {
   args: {
-    primary: false,
-    label: "Button"
-  }
+    label: 'Button',
+    disabled: true,
+  },
 };

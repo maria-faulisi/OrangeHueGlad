@@ -6,16 +6,56 @@
   font-weight: 700;
   line-height: 1;
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #555ab9;
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 
   &.primary {
     background-color: #555ab9;
     color: white;
+
+    &:hover:not(:disabled) {
+      background-color: #6167c7;
+    }
+
+    &:active:not(:disabled) {
+      background-color: #3f4490;
+    }
+
+    &:disabled {
+      background-color: #a0a3d3;
+      color: rgba(255, 255, 255, 0.7);
+    }
   }
 
   &.secondary {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
     background-color: transparent;
     color: #333;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &:active:not(:disabled) {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &:disabled {
+      color: #aaa;
+      box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset;
+    }
   }
 
   &.small {
