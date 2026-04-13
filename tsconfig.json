@@ -23,13 +23,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
 
-    "types": ["node", "vite/client"],
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
-    "paths": {
-      "@tokens": ["src/tokens/index.ts"],
-      "@tokens/*": ["src/tokens/*"]
-    }
+    "types": ["node", "vite/client"]
   },
   "include": ["src", "vitest.shims.d.ts"],
   "exclude": ["node_modules", "dist", "**/*.stories.*"]
