@@ -1,10 +1,12 @@
+@use '../../tokens/tokens' as t;
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid t.$color-border-subtle;
+  padding: t.$spacing-4 t.$spacing-7;
+  font-family: t.$font-family-base;
 
   svg {
     display: inline-block;
@@ -14,19 +16,19 @@
   h1 {
     display: inline-block;
     vertical-align: top;
-    margin: 6px 0 6px 10px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1;
+    margin: t.$spacing-2 0 t.$spacing-2 t.$spacing-4;
+    font-weight: t.$font-weight-bold;
+    font-size: t.$font-size-xl;
+    line-height: t.$line-height-tight;
   }
 
   button + button {
-    margin-left: 10px;
+    margin-left: t.$spacing-4;
   }
 }
 
 .welcome {
-  margin-right: 10px;
-  color: #333;
-  font-size: 14px;
+  margin-right: t.$spacing-4;
+  color: t.$color-text-primary;
+  font-size: t.$font-size-md;
 }

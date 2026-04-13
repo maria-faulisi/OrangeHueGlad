@@ -1,0 +1,85 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "$metadata": {
+    "library": "OrangeHueGlad",
+    "version": "0.1.0",
+    "description": "Design tokens in W3C DTCG format for Figma Variables API bi-directional sync"
+  },
+  "color": {
+    "primary": {
+      "default":  { "$type": "color", "$value": "#555AB9", "$description": "Primary action color" },
+      "hover":    { "$type": "color", "$value": "#6167C7", "$description": "Primary hover state" },
+      "active":   { "$type": "color", "$value": "#3F4490", "$description": "Primary pressed/active state" },
+      "disabled": { "$type": "color", "$value": "#A0A3D3", "$description": "Primary disabled state" }
+    },
+    "success": {
+      "bg":   { "$type": "color", "$value": "#E7FDD8", "$description": "Success badge/alert background" },
+      "text": { "$type": "color", "$value": "#357A14", "$description": "Success badge/alert text" }
+    },
+    "info": {
+      "default": { "$type": "color", "$value": "#1EA7FD", "$description": "Informational accent" }
+    },
+    "text": {
+      "primary":        { "$type": "color", "$value": "#333333", "$description": "Primary body text" },
+      "muted":          { "$type": "color", "$value": "#AAAAAA", "$description": "Muted/disabled text" },
+      "inverse":        { "$type": "color", "$value": "#FFFFFF", "$description": "Text on dark backgrounds" },
+      "inverse-subtle": { "$type": "color", "$value": "rgba(255, 255, 255, 0.7)", "$description": "Text on disabled primary backgrounds" }
+    },
+    "surface": {
+      "hover":    { "$type": "color", "$value": "rgba(0, 0, 0, 0.05)", "$description": "Surface hover overlay" },
+      "active":   { "$type": "color", "$value": "rgba(0, 0, 0, 0.10)", "$description": "Surface active/pressed overlay" },
+      "disabled": { "$type": "color", "$value": "rgba(0, 0, 0, 0.08)", "$description": "Surface disabled overlay" }
+    },
+    "border": {
+      "subtle": { "$type": "color", "$value": "rgba(0, 0, 0, 0.10)", "$description": "Subtle border" },
+      "shadow": { "$type": "color", "$value": "rgba(0, 0, 0, 0.15)", "$description": "Box-shadow border color" }
+    },
+    "focus": {
+      "ring": { "$type": "color", "$value": "#555AB9", "$description": "Keyboard focus ring color" }
+    }
+  },
+  "font": {
+    "family": {
+      "base": {
+        "$type": "fontFamily",
+        "$value": ["Nunito Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+        "$description": "Base typeface stack"
+      }
+    },
+    "size": {
+      "xs":  { "$type": "dimension", "$value": "11px" },
+      "sm":  { "$type": "dimension", "$value": "12px" },
+      "md":  { "$type": "dimension", "$value": "14px" },
+      "lg":  { "$type": "dimension", "$value": "16px" },
+      "xl":  { "$type": "dimension", "$value": "20px" },
+      "2xl": { "$type": "dimension", "$value": "32px" }
+    },
+    "weight": {
+      "regular": { "$type": "number", "$value": 400 },
+      "bold":    { "$type": "number", "$value": 700 }
+    },
+    "lineHeight": {
+      "tight": { "$type": "number", "$value": 1 },
+      "base":  { "$type": "dimension", "$value": "24px" },
+      "dense": { "$type": "dimension", "$value": "20px" }
+    }
+  },
+  "spacing": {
+    "1":  { "$type": "dimension", "$value": "4px" },
+    "2":  { "$type": "dimension", "$value": "6px" },
+    "3":  { "$type": "dimension", "$value": "8px" },
+    "4":  { "$type": "dimension", "$value": "10px" },
+    "5":  { "$type": "dimension", "$value": "12px" },
+    "6":  { "$type": "dimension", "$value": "16px" },
+    "7":  { "$type": "dimension", "$value": "20px" },
+    "8":  { "$type": "dimension", "$value": "24px" },
+    "9":  { "$type": "dimension", "$value": "30px" },
+    "10": { "$type": "dimension", "$value": "40px" },
+    "11": { "$type": "dimension", "$value": "48px" }
+  },
+  "radius": {
+    "pill":         { "$type": "dimension", "$value": "3em" },
+    "sm":           { "$type": "dimension", "$value": "1em" },
+    "focus-offset": { "$type": "dimension", "$value": "3px" }
+  }
+}

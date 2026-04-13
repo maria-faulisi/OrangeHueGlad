@@ -1,0 +1,88 @@
+// OrangeHueGlad — SCSS token variables
+// Each variable wraps a CSS custom property so SCSS components consume
+// tokens via @use syntax while retaining runtime flexibility.
+//
+// Usage in components:
+//   @use '../../tokens/tokens' as t;
+//   .foo { color: t.$color-text-primary; }
+
+// ─── Color / Primary ────────────────────────────────────────────────────────
+$color-primary-default:  var(--ohg-color-primary-default);
+$color-primary-hover:    var(--ohg-color-primary-hover);
+$color-primary-active:   var(--ohg-color-primary-active);
+$color-primary-disabled: var(--ohg-color-primary-disabled);
+$color-primary-subtle:   var(--ohg-color-primary-subtle);
+
+// ─── Color / Icon ───────────────────────────────────────────────────────────
+$color-icon-muted: var(--ohg-color-icon-muted);
+
+// ─── Color / Success ────────────────────────────────────────────────────────
+$color-success-bg:   var(--ohg-color-success-bg);
+$color-success-text: var(--ohg-color-success-text);
+
+// ─── Color / Info ───────────────────────────────────────────────────────────
+$color-info: var(--ohg-color-info);
+
+// ─── Color / Text ───────────────────────────────────────────────────────────
+$color-text-primary:        var(--ohg-color-text-primary);
+$color-text-muted:          var(--ohg-color-text-muted);
+$color-text-inverse:        var(--ohg-color-text-inverse);
+$color-text-inverse-subtle: var(--ohg-color-text-inverse-subtle);
+
+// ─── Color / Surface ────────────────────────────────────────────────────────
+$color-surface-hover:    var(--ohg-color-surface-hover);
+$color-surface-active:   var(--ohg-color-surface-active);
+$color-surface-disabled: var(--ohg-color-surface-disabled);
+
+// ─── Color / Border ─────────────────────────────────────────────────────────
+$color-border-subtle: var(--ohg-color-border-subtle);
+$color-border-shadow: var(--ohg-color-border-shadow);
+
+// ─── Color / Focus ──────────────────────────────────────────────────────────
+$color-focus-ring: var(--ohg-color-focus-ring);
+
+// ─── Typography / Family ────────────────────────────────────────────────────
+$font-family-base: var(--ohg-font-family-base);
+
+// ─── Typography / Size ──────────────────────────────────────────────────────
+$font-size-xs:  var(--ohg-font-size-xs);
+$font-size-sm:  var(--ohg-font-size-sm);
+$font-size-md:  var(--ohg-font-size-md);
+$font-size-lg:  var(--ohg-font-size-lg);
+$font-size-xl:  var(--ohg-font-size-xl);
+$font-size-2xl: var(--ohg-font-size-2xl);
+
+// ─── Typography / Weight ────────────────────────────────────────────────────
+$font-weight-regular: var(--ohg-font-weight-regular);
+$font-weight-bold:    var(--ohg-font-weight-bold);
+
+// ─── Typography / Line height ────────────────────────────────────────────────
+$line-height-tight: var(--ohg-line-height-tight);
+$line-height-base:  var(--ohg-line-height-base);
+$line-height-dense: var(--ohg-line-height-dense);
+
+// ─── Spacing ─────────────────────────────────────────────────────────────────
+$spacing-1:  var(--ohg-spacing-1);
+$spacing-2:  var(--ohg-spacing-2);
+$spacing-3:  var(--ohg-spacing-3);
+$spacing-4:  var(--ohg-spacing-4);
+$spacing-5:  var(--ohg-spacing-5);
+$spacing-6:  var(--ohg-spacing-6);
+$spacing-7:  var(--ohg-spacing-7);
+$spacing-8:  var(--ohg-spacing-8);
+$spacing-9:  var(--ohg-spacing-9);
+$spacing-10: var(--ohg-spacing-10);
+$spacing-11: var(--ohg-spacing-11);
+
+// ─── Spacing / Button padding ────────────────────────────────────────────────
+$button-padding-sm: var(--ohg-button-padding-sm);
+$button-padding-md: var(--ohg-button-padding-md);
+$button-padding-lg: var(--ohg-button-padding-lg);
+
+// ─── Border radius ───────────────────────────────────────────────────────────
+$radius-pill:         var(--ohg-radius-pill);
+$radius-sm:           var(--ohg-radius-sm);
+$radius-focus-offset: var(--ohg-radius-focus-offset);
+
+// ─── Transitions ─────────────────────────────────────────────────────────────
+$transition-default: var(--ohg-transition-default);

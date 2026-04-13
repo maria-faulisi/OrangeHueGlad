@@ -1,4 +1,4 @@
-import { useState, type FC } from 'react';
+import { useState } from 'react';
 
 import { Header } from '../Header';
 import styles from './Page.module.scss';
@@ -7,7 +7,10 @@ type User = {
   name: string;
 };
 
-export const Page: FC = () => {
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface PageProps {}
+
+export const Page = (_props: PageProps) => {
   const [user, setUser] = useState<User>();
 
   return (
@@ -61,7 +64,7 @@ export const Page: FC = () => {
               <path
                 d="M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z"
                 id="a"
-                fill="#999"
+                fill="var(--ohg-color-icon-muted)"
               />
             </g>
           </svg>

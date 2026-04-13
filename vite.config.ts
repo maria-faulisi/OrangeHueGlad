@@ -18,11 +18,16 @@ export default defineConfig({
       insertTypesEntry: true,
     }),
   ],
+  resolve: {
+    alias: {
+      '@tokens': path.resolve(__dirname, 'src/tokens'),
+    },
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'Rembrandt',
-      fileName: (format) => `rembrandt.${format === 'es' ? 'js' : 'umd.cjs'}`,
+      name: 'OrangeHueGlad',
+      fileName: (format) => `ohg.${format === 'es' ? 'js' : 'umd.cjs'}`,
       formats: ['es', 'umd'],
     },
     rollupOptions: {
