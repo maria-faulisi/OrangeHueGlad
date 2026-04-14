@@ -1,0 +1,23 @@
+name: Chromatic
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  chromatic:
+    name: Visual regression (Chromatic TurboSnap)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Full git history required for Chromatic TurboSnap (--only-changed)
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: npm
+      - run: npm ci
+      - run: npm run chromatic -- --only-changed
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

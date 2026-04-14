@@ -1,0 +1,39 @@
+@use '../../tokens/tokens' as t;
+
+.badge {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: t.$radius-sm;
+  font-family: t.$font-family-base;
+  font-weight: t.$font-weight-bold;
+  line-height: 12px;
+}
+
+// ─── Variants ─────────────────────────────────────────────────────────────────
+
+.success {
+  background-color: t.$color-success-bg;
+  color: t.$color-success-text;
+}
+
+.neutral {
+  background-color: t.$color-surface-active;
+  color: t.$color-text-primary;
+}
+
+.primary {
+  background-color: t.$color-primary-default;
+  color: t.$color-text-inverse;
+}
+
+// ─── Sizes ───────────────────────────────────────────────────────────────────
+
+.size-sm {
+  font-size: t.$font-size-xs;
+  padding: t.$spacing-1 t.$spacing-5;
+}
+
+.size-md {
+  font-size: t.$font-size-sm;
+  padding: t.$spacing-2 t.$spacing-6;
+}

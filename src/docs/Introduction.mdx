@@ -1,0 +1,70 @@
+{/* Introduction.mdx — Storybook home page + portfolio landing */}
+
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# OrangeHueGlad Design System
+
+A React + TypeScript component library built as a portfolio project demonstrating Design Engineering with AI. Every component, token, and workflow in this system was developed bi-directionally between **Figma** and **code** using **Claude + Figma MCP**.
+
+---
+
+## Install
+
+```bash
+npm install @mariafaulisi/ohg
+```
+
+```tsx
+import { Button, Badge, Card, Input, NavLink } from '@mariafaulisi/ohg';
+// CSS tokens are injected automatically — no separate import needed
+```
+
+---
+
+## What's inside
+
+| Layer | What it does |
+|-------|-------------|
+| **Design tokens** | `--ohg-*` CSS custom properties — the single source of truth synced with Figma Variables |
+| **Components** | React 19 + TypeScript components, all consuming tokens |
+| **Stories** | Storybook 10 stories double as Vitest browser tests via Playwright |
+| **CI** | GitHub Actions enforces token usage, type safety, and a11y on every PR |
+| **Figma** | Bi-directional workflow — generate code from Figma or push specs back to Figma |
+
+---
+
+## Component status
+
+| Component | Status |
+|-----------|--------|
+| Button | Stable |
+| Badge | Stable |
+| Card | Stable |
+| Input | Stable |
+| NavLink | Stable |
+| Heading / Body / Label | Stable |
+| Header | Stable |
+| Page | Stable |
+
+---
+
+## Design ↔ Code workflow
+
+This system is built with a bi-directional Figma MCP workflow:
+
+1. **Design → Code** — Copy a Figma node ID, prompt Claude with it, get a React component and Storybook story generated automatically
+2. **Code → Design** — Prompt Claude to read a `.tsx` component, push a Figma component back via the MCP write API
+
+See [`docs/figma-mcp-workflow.md`](https://github.com/mariafaulisi/OrangeHueGlad/blob/main/docs/figma-mcp-workflow.md) for exact prompts and workflow steps.
+
+---
+
+## Built with
+
+- React 19 · TypeScript 5 · Vite 7
+- Storybook 10 · Vitest · Playwright
+- SCSS CSS Modules
+- Claude + Figma MCP
+- GitHub Actions · Chromatic

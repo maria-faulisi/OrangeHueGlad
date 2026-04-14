@@ -1,0 +1,88 @@
+/* OrangeHueGlad Design Tokens
+ * Single source of truth — all design values live here.
+ * Naming: --ohg-{group}-{variant}
+ * Figma Variables API mapping: {collection}/{group}/{variant}
+ */
+
+:root {
+  /* ─── Color / Primary ─────────────────────────────────────────────────── */
+  --ohg-color-primary-default:  #555AB9;
+  --ohg-color-primary-hover:    #6167C7;
+  --ohg-color-primary-active:   #3F4490;
+  --ohg-color-primary-disabled: #A0A3D3;
+  --ohg-color-primary-subtle:   #91BAF8;
+
+  /* ─── Color / Icon ────────────────────────────────────────────────────── */
+  --ohg-color-icon-muted: #999999;
+
+  /* ─── Color / Success ─────────────────────────────────────────────────── */
+  --ohg-color-success-bg:   #E7FDD8;
+  --ohg-color-success-text: #357A14;
+
+  /* ─── Color / Info ────────────────────────────────────────────────────── */
+  --ohg-color-info: #1EA7FD;
+
+  /* ─── Color / Text ────────────────────────────────────────────────────── */
+  --ohg-color-text-primary:        #333333;
+  --ohg-color-text-muted:          #AAAAAA;
+  --ohg-color-text-inverse:        #FFFFFF;
+  --ohg-color-text-inverse-subtle: rgba(255, 255, 255, 0.7);
+
+  /* ─── Color / Surface overlays ───────────────────────────────────────── */
+  --ohg-color-surface-hover:    rgba(0, 0, 0, 0.05);
+  --ohg-color-surface-active:   rgba(0, 0, 0, 0.10);
+  --ohg-color-surface-disabled: rgba(0, 0, 0, 0.08);
+
+  /* ─── Color / Border ──────────────────────────────────────────────────── */
+  --ohg-color-border-subtle: rgba(0, 0, 0, 0.10);
+  --ohg-color-border-shadow: rgba(0, 0, 0, 0.15);
+
+  /* ─── Color / Focus ───────────────────────────────────────────────────── */
+  --ohg-color-focus-ring: #555AB9;
+
+  /* ─── Typography / Family ─────────────────────────────────────────────── */
+  --ohg-font-family-base: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* ─── Typography / Size ───────────────────────────────────────────────── */
+  --ohg-font-size-xs:  11px;
+  --ohg-font-size-sm:  12px;
+  --ohg-font-size-md:  14px;
+  --ohg-font-size-lg:  16px;
+  --ohg-font-size-xl:  20px;
+  --ohg-font-size-2xl: 32px;
+
+  /* ─── Typography / Weight ─────────────────────────────────────────────── */
+  --ohg-font-weight-regular: 400;
+  --ohg-font-weight-bold:    700;
+
+  /* ─── Typography / Line height ────────────────────────────────────────── */
+  --ohg-line-height-tight: 1;
+  --ohg-line-height-base:  24px;
+  --ohg-line-height-dense: 20px;
+
+  /* ─── Spacing ──────────────────────────────────────────────────────────── */
+  --ohg-spacing-1:  4px;
+  --ohg-spacing-2:  6px;
+  --ohg-spacing-3:  8px;
+  --ohg-spacing-4:  10px;
+  --ohg-spacing-5:  12px;
+  --ohg-spacing-6:  16px;
+  --ohg-spacing-7:  20px;
+  --ohg-spacing-8:  24px;
+  --ohg-spacing-9:  30px;
+  --ohg-spacing-10: 40px;
+  --ohg-spacing-11: 48px;
+
+  /* ─── Spacing / Button padding ────────────────────────────────────────── */
+  --ohg-button-padding-sm: 10px 16px;
+  --ohg-button-padding-md: 11px 20px;
+  --ohg-button-padding-lg: 12px 24px;
+
+  /* ─── Border radius ────────────────────────────────────────────────────── */
+  --ohg-radius-pill:         3em;
+  --ohg-radius-sm:           1em;
+  --ohg-radius-focus-offset: 3px;
+
+  /* ─── Transitions ──────────────────────────────────────────────────────── */
+  --ohg-transition-default: background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+}

@@ -1,0 +1,41 @@
+@use '../../tokens/tokens' as t;
+
+// ─── Heading ──────────────────────────────────────────────────────────────────
+
+.heading {
+  font-family: t.$font-family-base;
+  font-weight: t.$font-weight-bold;
+  line-height: t.$line-height-tight;
+  color: t.$color-text-primary;
+  margin: 0;
+}
+
+.heading-sm  { font-size: t.$font-size-sm; }
+.heading-md  { font-size: t.$font-size-md; }
+.heading-lg  { font-size: t.$font-size-lg; }
+.heading-xl  { font-size: t.$font-size-xl; }
+.heading-xxl { font-size: t.$font-size-2xl; }
+
+// ─── Body ─────────────────────────────────────────────────────────────────────
+
+.body {
+  font-family: t.$font-family-base;
+  font-weight: t.$font-weight-regular;
+  color: t.$color-text-primary;
+  margin: 0;
+}
+
+.body-sm    { font-size: t.$font-size-sm; line-height: t.$line-height-dense; }
+.body-md    { font-size: t.$font-size-md; line-height: t.$line-height-base; }
+.body-muted { color: t.$color-text-muted; }
+
+// ─── Label ────────────────────────────────────────────────────────────────────
+
+.label {
+  font-family: t.$font-family-base;
+  font-weight: t.$font-weight-bold;
+  color: t.$color-text-primary;
+}
+
+.label-sm { font-size: t.$font-size-sm; }
+.label-md { font-size: t.$font-size-md; }

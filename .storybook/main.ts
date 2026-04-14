@@ -19,6 +19,10 @@ const config: StorybookConfig = {
     if (config.build) {
       delete config.build.lib;
     }
+    // Set base path for GitHub Pages deployment at /OrangeHueGlad/
+    if (process.env.GITHUB_PAGES) {
+      config.base = '/OrangeHueGlad/';
+    }
     return config;
   },
 };

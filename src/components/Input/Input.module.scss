@@ -1,0 +1,75 @@
+@use '../../tokens/tokens' as t;
+
+.wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: t.$spacing-2;
+}
+
+.full-width {
+  display: flex;
+  width: 100%;
+}
+
+// ─── Label ────────────────────────────────────────────────────────────────────
+
+.label {
+  font-family: t.$font-family-base;
+  font-size: t.$font-size-md;
+  font-weight: t.$font-weight-bold;
+  color: t.$color-text-primary;
+}
+
+// ─── Input ───────────────────────────────────────────────────────────────────
+
+.input {
+  font-family: t.$font-family-base;
+  font-size: t.$font-size-md;
+  color: t.$color-text-primary;
+  border: 1px solid t.$color-border-subtle;
+  border-radius: 4px;
+  background-color: t.$color-text-inverse;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+
+  &:focus-visible {
+    border-color: t.$color-focus-ring;
+    box-shadow: 0 0 0 3px t.$color-primary-disabled;
+    outline-offset: t.$radius-focus-offset;
+  }
+
+  &:disabled {
+    background-color: t.$color-surface-hover;
+    color: t.$color-text-muted;
+    cursor: not-allowed;
+  }
+}
+
+.input-error {
+  border-color: t.$color-success-text;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px t.$color-success-bg;
+  }
+}
+
+// ─── Sizes ───────────────────────────────────────────────────────────────────
+
+.input-sm { padding: t.$spacing-2 t.$spacing-4; font-size: t.$font-size-sm; }
+.input-md { padding: t.$spacing-3 t.$spacing-5; font-size: t.$font-size-md; }
+.input-lg { padding: t.$spacing-4 t.$spacing-6; font-size: t.$font-size-lg; }
+
+// ─── Hint / Error ─────────────────────────────────────────────────────────────
+
+.hint {
+  font-family: t.$font-family-base;
+  font-size: t.$font-size-sm;
+  color: t.$color-text-muted;
+}
+
+.error {
+  font-family: t.$font-family-base;
+  font-size: t.$font-size-sm;
+  color: t.$color-success-text;
+  font-weight: t.$font-weight-bold;
+}

@@ -1,0 +1,82 @@
+{/* Contributing.mdx — how to add components and follow the token rules */}
+
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Contributing" />
+
+# Contributing
+
+## Adding a new component
+
+Every component follows the **5-file convention**:
+
+```
+src/components/ComponentName/
+  ComponentName.tsx         ← component + exported prop interface
+  ComponentName.module.scss ← SCSS CSS Modules, must use @use tokens
+  ComponentName.stories.tsx ← Storybook CSF3 stories (also Vitest tests)
+  ComponentName.mdx         ← usage docs (optional but encouraged)
+  index.ts                  ← re-exports component and types
+```
+
+Then export from `src/index.ts`.
+
+---
+
+## Token rules
+
+**No hardcoded design values in component files.** The CI `token-lint` job enforces this.
+
+✅ Correct:
+```scss
+@use '../../tokens/tokens' as t;
+
+.button {
+  color: t.$color-text-primary;
+  font-family: t.$font-family-base;
+}
+```
+
+❌ Will fail CI:
+```scss
+.button {
+  color: #333333;
+  font-family: 'Nunito Sans', sans-serif;
+}
+```
+
+To run the check locally: `node scripts/check-tokens.mjs`
+
+---
+
+## SCSS conventions
+
+- Always import tokens with `@use '../../tokens/tokens' as t;`
+- Prefer `t.$spacing-*` over ad-hoc pixel values
+- Use `camelCaseOnly` CSS module class names — Vite transforms `.my-class` → `myClass`
+- Use `?? ''` when accessing `styles.*` properties to handle the `string | undefined` type
+
+---
+
+## TypeScript conventions
+
+These strict flags are enabled — read `CLAUDE.md` for full details:
+
+- `exactOptionalPropertyTypes` — spread optional props conditionally: `{...(val !== undefined && { prop: val })}`
+- `verbatimModuleSyntax` — use `import type` for type-only imports
+- `noUncheckedIndexedAccess` — array/object access returns `T | undefined`; use `?? fallback`
+
+---
+
+## Figma MCP workflow
+
+See [`docs/figma-mcp-workflow.md`](https://github.com/mariafaulisi/OrangeHueGlad/blob/main/docs/figma-mcp-workflow.md) for step-by-step instructions on generating components from Figma or pushing specs back to Figma.
+
+---
+
+## Release process
+
+1. Bump version in `package.json`
+2. Commit and push to `main`
+3. Tag the commit: `git tag v0.x.0 && git push --tags`
+4. GitHub Actions publishes to npm and deploys Storybook to GitHub Pages automatically

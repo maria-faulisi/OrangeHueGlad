@@ -1,0 +1,19 @@
+@use '../../tokens/tokens' as t;
+
+.card {
+  font-family: t.$font-family-base;
+  border: 1px solid t.$color-border-subtle;
+  border-radius: 8px;
+  background-color: t.$color-text-inverse;
+  color: t.$color-text-primary;
+}
+
+.raised {
+  box-shadow: 0 2px 8px t.$color-border-shadow;
+}
+
+// ─── Padding variants ─────────────────────────────────────────────────────────
+
+.padding-sm { padding: t.$spacing-4; }
+.padding-md { padding: t.$spacing-7; }
+.padding-lg { padding: t.$spacing-8; }

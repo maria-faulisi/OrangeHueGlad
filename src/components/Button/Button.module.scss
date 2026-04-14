@@ -1,20 +1,22 @@
+@use '../../tokens/tokens' as t;
+
 .button {
   display: inline-block;
   cursor: pointer;
   border: 0;
-  border-radius: 3em;
-  font-weight: 700;
-  line-height: 1;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  transition: background-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+  border-radius: t.$radius-pill;
+  font-weight: t.$font-weight-bold;
+  line-height: t.$line-height-tight;
+  font-family: t.$font-family-base;
+  transition: t.$transition-default;
 
   &:focus {
     outline: none;
   }
 
   &:focus-visible {
-    outline: 3px solid #555ab9;
-    outline-offset: 3px;
+    outline: 3px solid t.$color-focus-ring;
+    outline-offset: t.$radius-focus-offset;
   }
 
   &:disabled {
@@ -22,54 +24,54 @@
   }
 
   &.primary {
-    background-color: #555ab9;
-    color: white;
+    background-color: t.$color-primary-default;
+    color: t.$color-text-inverse;
 
     &:hover:not(:disabled) {
-      background-color: #6167c7;
+      background-color: t.$color-primary-hover;
     }
 
     &:active:not(:disabled) {
-      background-color: #3f4490;
+      background-color: t.$color-primary-active;
     }
 
     &:disabled {
-      background-color: #a0a3d3;
-      color: rgba(255, 255, 255, 0.7);
+      background-color: t.$color-primary-disabled;
+      color: t.$color-text-inverse-subtle;
     }
   }
 
   &.secondary {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    box-shadow: t.$color-border-shadow 0px 0px 0px 1px inset;
     background-color: transparent;
-    color: #333;
+    color: t.$color-text-primary;
 
     &:hover:not(:disabled) {
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: t.$color-surface-hover;
     }
 
     &:active:not(:disabled) {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: t.$color-surface-active;
     }
 
     &:disabled {
-      color: #aaa;
-      box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset;
+      color: t.$color-text-muted;
+      box-shadow: t.$color-surface-disabled 0px 0px 0px 1px inset;
     }
   }
 
   &.small {
-    padding: 10px 16px;
-    font-size: 12px;
+    padding: t.$button-padding-sm;
+    font-size: t.$font-size-sm;
   }
 
   &.medium {
-    padding: 11px 20px;
-    font-size: 14px;
+    padding: t.$button-padding-md;
+    font-size: t.$font-size-md;
   }
 
   &.large {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: t.$button-padding-lg;
+    font-size: t.$font-size-lg;
   }
 }
